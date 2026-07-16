@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Services | JIYAR Environmental Technologies</title>
+    <meta name="description" content="Turnkey industrial instrumentation calibration, repair, and certified AMC maintenance contracts across Eastern India. Jamshedpur-localized emergency response.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Fonts & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 font-['Inter',sans-serif]">
+
+    <!-- Navigation Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-200 transition-all duration-300">
+        <div class="w-full px-6 lg:px-12 py-3 lg:py-4 flex items-center justify-between">
+            <div class="flex-1 flex justify-start">
+                <a href="index.html" class="flex items-center space-x-3 group text-decoration-none">
+                    <div class="bg-[var(--primary)] text-white px-3 py-2 rounded-lg font-bold text-xl tracking-wider shadow-md group-hover:bg-[var(--secondary)] transition-colors duration-300">
+                        JIYAR
+                    </div>
+                    <div class="hidden xl:flex flex-col leading-none justify-center">
+                        <span class="block text-xs font-bold text-[var(--primary)] tracking-widest mb-0.5">ENVIRONMENTAL</span>
+                        <span class="block text-[10px] text-gray-500 uppercase tracking-wider">Technologies Pvt. Ltd.</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="hidden lg:flex justify-center space-x-6" id="desktop-nav">
+                <a href="index.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    Home
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="about.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    About Us
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="solutions.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    Solutions
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="services.html" class="nav-link relative px-2 py-2 text-sm font-bold text-[var(--primary)] after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-[var(--secondary)] after:left-0 after:bottom-0">
+                    Services
+                </a>
+                <a href="products.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    Products
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="leasing.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    Leasing
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="smart-monitoring.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    Smart Monitoring
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+
+            <div class="flex-1 flex justify-end items-center space-x-4">
+                <a href="login.html" class="hidden lg:flex text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors items-center gap-2 mr-4">
+                    <i class="fa-solid fa-lock text-[var(--secondary)]"></i> Client Login
+                </a>
+                <a href="index.html#contact" class="hidden md:inline-flex items-center justify-center gap-2 bg-[var(--secondary)] hover:bg-[#14a07d] text-[var(--primary)] font-extrabold text-xs uppercase tracking-wider px-6 py-3 rounded-md shadow-lg shadow-[var(--secondary)]/30 transition-all duration-300 hover:-translate-y-0.5">
+                    <span>Request Survey</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden text-[var(--primary)] hover:text-[var(--secondary)] focus:outline-none p-2 transition-colors">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Engineered Hero Banner -->
+    <!-- <section class="page-banner bg-[var(--primary)] text-white py-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <div class="container relative z-10 text-center max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Technical Engineering & Field Support</h1>
+            <p class="text-lg text-slate-300 leading-relaxed">
+                Maximizing system uptime, protecting analytical structural assets, and executing precision metrology calibrations to validate continuous regulatory compliance.
+            </p>
+            <div class="w-16 h-1 bg-[var(--secondary)] mx-auto mt-8"></div>
+        </div>
+    </section> -->
+
+
+    <section class="page-banner service-banner">
+        <div class="container">
+            <h1>Technical Engineering & Lifecycle Services</h1>
+            <p>Maximizing system uptime, protecting analytical structural assets, and validating continuous regulatory compliance arrays.</p>
+            <div class="divider"></div>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="py-20 bg-slate-50">
+        <div class="container max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-[var(--secondary)] uppercase tracking-widest mb-2 block">Our Operational Specializations</span>
+                <h2 class="text-3xl font-bold text-[var(--primary)]">Industrial-Grade Field Support</h2>
+                <p class="text-slate-500 mt-4 font-medium">Structured to match the non-stop cadence of heavy processing units across Eastern India.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
+                
+                <!-- Core AMC Block (Large) -->
+                <div class="lg:col-span-8 bg-white border border-slate-200 rounded-xl p-8 hover:shadow-lg transition-shadow border-t-4 border-t-[var(--secondary)] flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 bg-emerald-50 rounded-lg flex items-center justify-center text-[var(--secondary)] text-2xl">
+                                <i class="fa-solid fa-file-contract"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold text-[var(--secondary)] uppercase tracking-widest block">Uptime Management</span>
+                                <h3 class="text-2xl font-extrabold text-[var(--primary)]">Annual Maintenance Contracts (AMC/CAMC)</h3>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed font-medium mb-6">
+                            Rigorous preventive AMC and comprehensive CAMC programs specifically structured to satisfy rigid SPCB/CPCB continuous uptime standards (>98%). We assume complete operational accountability for your monitoring panels, eliminating sudden analytical failures and regulatory data gaps.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 bg-slate-50 p-6 rounded-lg border border-slate-100 mb-8">
+                            <div>
+                                <h5 class="font-bold text-[var(--primary)] text-sm mb-2"><i class="fa-solid fa-screwdriver-wrench text-[var(--secondary)] mr-1"></i> Preventive Audits</h5>
+                                <p class="text-xs text-slate-500">Scheduled fluidic checkups, optical alignments, and filter replacements.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-[var(--primary)] text-sm mb-2"><i class="fa-solid fa-truck-fast text-[var(--secondary)] mr-1"></i> Priority Backup</h5>
+                                <p class="text-xs text-slate-500">Guaranteed technician dispatch windows with localized spare allocations.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-[var(--primary)] text-sm mb-2"><i class="fa-solid fa-shield-halved text-[var(--secondary)] mr-1"></i> Data Security</h5>
+                                <p class="text-xs text-slate-500">Diagnostic validation to confirm alignment with USEPA/TUV baselines.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="index.html#contact" class="inline-flex items-center gap-2 text-sm font-bold text-[var(--primary)] bg-[var(--secondary)] hover:bg-[#14a07d] px-6 py-3 rounded transition-colors shadow-sm">
+                            Request AMC Proposal <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Calibration Block (Medium) -->
+                <div class="lg:col-span-4 bg-white border border-slate-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                    <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center text-[var(--primary)] text-2xl mb-6">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-1">Metrology</span>
+                    <h3 class="text-xl font-extrabold text-[var(--primary)] mb-4">Traceable Calibration</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                        Executing precise multi-point zero and span analytical calibrations using NABL-traceable reference gas standards. Complete site documentation and drift analysis reports generated to safeguard data defensibility.
+                    </p>
+                    <ul class="space-y-2 text-xs text-slate-600 list-disc pl-4 marker:text-[var(--secondary)] mt-4">
+                        <li>Zero & Span Verification</li>
+                        <li>Certified Reference Gas Usage</li>
+                        <li>Operational Field Validation</li>
+                    </ul>
+                </div>
+
+                <!-- Emergency Repair Block (Highlight/Large) -->
+                <div class="lg:col-span-8 bg-[#0a192f] text-white border border-slate-700 rounded-xl p-8 hover:shadow-xl transition-shadow relative overflow-hidden flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 text-8xl"><i class="fa-solid fa-truck-medical"></i></div>
+                    <div class="relative z-10 mb-6">
+                        <span class="inline-flex items-center gap-2 text-[10px] font-bold bg-[#d97706] text-white uppercase tracking-widest px-3 py-1 rounded mb-4">
+                            <i class="fa-solid fa-bolt"></i> Jamshedpur Hot-Swap Network
+                        </span>
+                        <h3 class="text-2xl font-extrabold mb-4">Emergency Breakdown & Fault Isolation</h3>
+                        <p class="text-slate-300 leading-relaxed text-sm mb-6 max-w-2xl">
+                            Heavy industry never sleeps. Operating directly out of our Jamshedpur hub, our rapid-response diagnostic team deploys across Eastern India to resolve sudden system operational dropouts before government servers log a violation tracking error.
+                        </p>
+                        
+                        <!-- Added Technical Faults Matrix -->
+                        <div class="mb-6">
+                            <h4 class="text-[11px] font-bold text-slate-300 mb-3 uppercase tracking-wider border-b border-slate-700 pb-2">Common Fault Architectures Resolved:</h4>
+                            <div class="flex flex-wrap gap-2 text-xs">
+                                <span class="bg-red-500/10 text-red-400 px-3 py-1.5 rounded border border-red-500/20 shadow-sm"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Sensor Failures</span>
+                                <span class="bg-red-500/10 text-red-400 px-3 py-1.5 rounded border border-red-500/20 shadow-sm"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Calibration Drifts</span>
+                                <span class="bg-red-500/10 text-red-400 px-3 py-1.5 rounded border border-red-500/20 shadow-sm"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Sampling Blockages</span>
+                                <span class="bg-red-500/10 text-red-400 px-3 py-1.5 rounded border border-red-500/20 shadow-sm"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Data Dropouts</span>
+                                <span class="bg-red-500/10 text-red-400 px-3 py-1.5 rounded border border-red-500/20 shadow-sm"><i class="fa-solid fa-triangle-exclamation mr-1"></i> PCB/Controller Faults</span>
+                                <span class="bg-red-500/10 text-red-400 px-3 py-1.5 rounded border border-red-500/20 shadow-sm"><i class="fa-solid fa-triangle-exclamation mr-1"></i> Flow/Pump Issues</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="prod-specs" style="background: #fffbeb; border-left-color: #d97706; color: #b45309;">
+                        <span><i class="fa-solid fa-clock"></i> <strong>Turnaround Objective:</strong> Rapid mobilization to minimize active regulatory data loss windows.</span>
+                    </div>
+                    <a href="index.html#contact" class="btn-product spare-btn">Call Technical Emergency Desk</a>
+                    
+                </div>
+
+                <!-- Commissioning Block (Medium) -->
+                <div class="lg:col-span-4 bg-white border border-slate-200 rounded-xl p-8 hover:shadow-lg transition-shadow flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center text-[var(--primary)] text-2xl mb-6">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </div>
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-widest block mb-1">Field Engineering</span>
+                        <h3 class="text-xl font-extrabold text-[var(--primary)] mb-4">System Commissioning</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">
+                            Complete deployment loops from initial structural site assessment to final compliance approval. We execute perfect sample probe alignment, electrical integration, and final analog-to-digital signal handoffs.
+                        </p>
+                        
+                        <!-- Added Setup Scope Matrices -->
+                        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
+                            <div>
+                                <h4 class="font-bold text-[var(--primary)] text-xs mb-2 uppercase tracking-wider">Systems Installed:</h4>
+                                <ul class="space-y-1 text-slate-600 text-xs list-disc pl-4 marker:text-[var(--secondary)]">
+                                    <li>AAQMS & CEMS</li>
+                                    <li>Gas Detection Systems</li>
+                                    <li>Water Quality Arrays</li>
+                                    <li>Dust & Particulate</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[var(--primary)] text-xs mb-2 uppercase tracking-wider">Setup Scope:</h4>
+                                <ul class="space-y-1 text-slate-600 text-xs list-disc pl-4 marker:text-[var(--secondary)]">
+                                    <li>Site Survey & Planning</li>
+                                    <li>Mechanical & Electrical</li>
+                                    <li>Comm. Configuration</li>
+                                    <li>Testing & Training</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="prod-card size-small">
+                    <div class="prod-icon-box"><i class="fa-solid fa-satellite-dish"></i></div>
+                    <span class="prod-cat">Industrial IoT</span>
+                    <h3>Telemetry Optimization</h3>
+                    <p>Continuous software observation logs targeting analyzer system statuses. We flag data drop communication errors early via edge caching checks.</p>
+                    <a href="#" class="btn-product">View IIoT Framework</a>
+                </div>
+
+                <div class="prod-card size-small">
+                    <div class="prod-icon-box"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <span class="prod-cat">Regulatory Liaison</span>
+                    <h3>Compliance Readiness Audits</h3>
+                    <p>Comprehensive paperwork validation, pre-inspection assessments, and expert data diagnostics to minimize corporate legal risks during SPCB/CPCB reviews.</p>
+                    <a href="#" class="btn-product">Request Audit Checklist</a>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance Standards Grid -->
+    <section class="compliance-standards" style="background: #f8fafc; padding: 50px 0; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+        <div class="container" style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 30px; text-align: center;">
+            <div class="standard-item" style="flex: 1; min-width: 250px;">
+                <i class="fa-solid fa-award" style="font-size: 32px; color: var(--secondary); margin-bottom: 12px;"></i>
+                <h4 style="color: var(--primary); font-size: 18px; margin-bottom: 6px;">USEPA Framework Alignment</h4>
+                <p style="font-size: 14px; color: #64748b; line-height: 1.5;">Maintenance procedures mapped to protect US Environmental Protection Agency tracking cell mechanics.</p>
+            </div>
+            <div class="standard-item" style="flex: 1; min-width: 250px;">
+                <i class="fa-solid fa-shield-halved" style="font-size: 32px; color: var(--secondary); margin-bottom: 12px;"></i>
+                <h4 style="color: var(--primary); font-size: 18px; margin-bottom: 6px;">TUV & MCERTS Validation</h4>
+                <p style="font-size: 14px; color: #64748b; line-height: 1.5;">Calibration sequences tracing directly back to certified European performance testing limits.</p>
+            </div>
+            <div class="standard-item" style="flex: 1; min-width: 250px;">
+                <i class="fa-solid fa-server" style="font-size: 32px; color: var(--secondary); margin-bottom: 12px;"></i>
+                <h4 style="color: var(--primary); font-size: 18px; margin-bottom: 6px;">CPCB Real-Time Standards</h4>
+                <p style="font-size: 14px; color: #64748b; line-height: 1.5;">Software connectivity protocols designed to perfectly feed continuous data array loops to state pollution nodes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-[var(--primary)] text-center text-white">
+        <div class="container max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Ready to Transition Your AMC to a Reliable Local Team?</h2>
+            <p class="text-slate-300 mb-8 font-medium">Connect with our Jamshedpur operational lab today to receive a highly detailed, component-level service quote tailored for your site's exact instrumentation matrix.</p>
+            <a href="index.html#contact" class="inline-flex items-center gap-2 bg-[var(--secondary)] hover:bg-[#14a07d] text-[var(--primary)] font-extrabold px-8 py-4 rounded-md transition-all shadow-lg hover:-translate-y-1 uppercase tracking-wider">
+                Request Service Proposal <i class="fa-solid fa-file-signature"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Master Footer -->
+   <!-- Expanded Master Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand & Identity -->
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">
+                        <div class="logo-box">JIYAR</div>
+                        <div class="logo-text">
+                            <span class="text-top">ENVIRONMENTAL</span>
+                            <span class="text-bottom">Technologies Pvt. Ltd.</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Your single-window partner for industrial environmental compliance, precision instrumentation, and smart telemetry across Eastern India.</p>
+                    <ul class="footer-contact">
+                        <li><i class="fa-solid fa-location-dot"></i> Bharam Toli, Bariatu, Near Don Bosco church, Ranchi, Jharkhand (HQ)</li>
+                        <li><i class="fa-solid fa-phone"></i> +91 9110124331, +91 9430100514</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@jiyar.in</li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4>Company Profile</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="industries.html">Sectors Served</a></li>
+                        <li><a href="#contact">Request Compliance Audit</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Core Solutions -->
+                <div class="footer-col">
+                    <h4>Solutions & Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">AMC & Instrumentation</a></li>
+                        <li><a href="solutions.html">Integration & Telemetry</a></li>
+                        <li><a href="products.html">Analyzers & Critical Spares</a></li>
+                        <li><a href="leasing.html">Turnkey Leasing (HaaS)</a></li>
+                        <li><a href="smart-monitoring.html">JIYAR Insight™ Cloud Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Regions & Certifications -->
+                <div class="footer-col">
+                    <h4>Operational Reach</h4>
+                    <ul class="footer-links region-list">
+                        <li><i class="fa-solid fa-map-pin"></i> Jharkhand</li>
+                        <li><i class="fa-solid fa-map-pin"></i> Odisha</li>
+                        <li><i class="fa-solid fa-map-pin"></i> Chhatisgarh</li>
+                        <li><i class="fa-solid fa-map-pin"></i> West Bengal</li>
+                    </ul>
+                    <div class="footer-badges">
+                        <span class="compliance-badge"><i class="fa-solid fa-check-circle"></i> CPCB Ready</span>
+                        <span class="compliance-badge"><i class="fa-solid fa-check-circle"></i> USEPA Standards</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 JIYAR Environmental Technologies Pvt. Ltd. All Rights Reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="terms-conditions.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenuContainer = document.getElementById('nav-menu-container');
+
+        if(mobileMenuBtn && navMenuContainer) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                navMenuContainer.classList.toggle('active');
+            });
+        }
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

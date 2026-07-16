@@ -1,0 +1,1690 @@
+/* ==========================================================================
+   1. CORE VARIABLES & DESIGN TOKENS
+   ========================================================================== */
+:root {
+    --primary: #0f3d59;      /* Deep Industrial Slate Blue */
+    --secondary: #17b890;    /* Eco/Compliance Emerald Green */
+    --dark-slate: #1e293b;   /* Background Accents & Typography */
+    --light-bg: #f8fafc;     /* Workspace White-Grey */
+    --text-color: #334155;   /* Body Slate Copy */
+    --white: #ffffff;
+    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center { text-align: center; }
+.divider { width: 60px; height: 4px; background: var(--secondary); margin: 15px 0; }
+.divider.center { margin: 15px auto; }
+
+/* Grid Utilities */
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 40px; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+
+/* ==========================================================================
+   2. GLOBAL HEADER, NAVIGATION & INTERACTIVE RESPONSIVE MENU
+   ========================================================================== */
+/* .top-bar {
+    background: var(--dark-slate);
+    color: #94a3b8;
+    padding: 8px 0;
+    font-size: 14px;
+}
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+}
+.top-bar i { margin-right: 6px; color: var(--secondary); }
+
+.main-header {
+    background: var(--white);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo h2 {
+    color: var(--primary);
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.logo span { color: var(--secondary); font-weight: 300; margin-left: 4px; } */
+
+/* Desktop Navigation Menu Links */
+/* .nav-links {
+    display: flex;
+    align-items: center;
+}
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 25px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+.nav-links a:hover, .nav-links a.active { color: var(--primary); }
+.nav-links .btn-nav {
+    background: var(--primary);
+    color: var(--white);
+    padding: 8px 18px;
+    border-radius: 4px;
+}
+.nav-links .btn-nav:hover { background: var(--secondary); color: var(--white); } */
+
+/* Mobile Menu Hamburger Button (Hidden on Desktop) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+.menu-toggle .bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary);
+    transition: var(--transition);
+}
+
+/* ==========================================================================
+   3. INNER PAGE DEPLOYMENT BANNER
+   ========================================================================== */
+.page-banner {
+    background: linear-gradient(rgba(15, 61, 89, 0.95), rgba(30, 41, 59, 0.98)), url('https://images.unsplash.com/photo-1535557142533-b5e1cc6e2a5d?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 60px 0;
+}
+.page-banner h1 { font-size: 36px; margin-bottom: 10px; }
+.page-banner p { color: #94a3b8; max-width: 700px; font-size: 16px; }
+
+/* ==========================================================================
+   4. INTEGRATION SOURCING PHILOSOPHY SECTION
+   ========================================================================== */
+.philosophy-section {
+    padding: 80px 0 40px 0;
+    background: var(--light-bg);
+}
+.philosophy-box {
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+}
+.philosophy-badge {
+    display: inline-block;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--secondary);
+    background: rgba(23, 184, 144, 0.1);
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+.philosophy-box h2 { color: var(--primary); font-size: 28px; margin-bottom: 20px; }
+.philosophy-box p { color: var(--text-color); font-size: 16px; line-height: 1.7; margin-bottom: 20px; }
+
+.philosophy-benefits {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #edf2f7;
+}
+.benefit-item i { font-size: 24px; color: var(--secondary); margin-bottom: 12px; }
+.benefit-item h4 { color: var(--primary); font-size: 16px; margin-bottom: 8px; }
+.benefit-item p { font-size: 13px; color: #64748b; line-height: 1.5; }
+
+/* ==========================================================================
+   5. ASYMMETRICAL INDUSTRIAL PRODUCTS GRID
+   ========================================================================== */
+.products-section { padding: 80px 0; background: #ffffff; }
+.section-header { text-align: center; margin-bottom: 50px; }
+.section-header h2 { color: var(--primary); font-size: 32px; }
+
+.asymmetric-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+    align-items: stretch;
+}
+
+.prod-card {
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    overflow: hidden;
+}
+.prod-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(15, 61, 89, 0.08);
+    border-color: #cbd5e1;
+}
+
+/* Structural Span Configurations */
+.size-large { grid-column: span 8; }
+.size-medium { grid-column: span 4; }
+.size-small { grid-column: span 4; }
+.size-xlarge { grid-column: span 12; }
+
+.card-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+}
+.banner-badge { background: rgba(23, 184, 144, 0.1); color: var(--secondary); }
+.spares-badge { background: rgba(245, 158, 11, 0.1); color: #d97706; }
+
+.prod-icon-box {
+    width: 48px;
+    height: 48px;
+    background: var(--light-bg);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.prod-cat {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #64748b;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+.unique-orange { color: #d97706; }
+
+.prod-card h3 { font-size: 22px; color: var(--primary); margin-bottom: 12px; }
+.size-small h3 { font-size: 18px; }
+.prod-card p { font-size: 14px; color: var(--text-color); line-height: 1.6; margin-bottom: 20px; flex-grow: 1; }
+
+.prod-specs {
+    background: var(--light-bg);
+    padding: 15px 20px;
+    border-radius: 4px;
+    font-size: 13px;
+    color: var(--dark-slate);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-left: 3px solid var(--primary);
+}
+
+.leasing-tag {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--secondary);
+    background: rgba(23, 184, 144, 0.05);
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px dashed var(--secondary);
+}
+
+/* ==========================================================================
+   6. EXPANDED SPARE PARTS COMPONENT MATRIX
+   ========================================================================== */
+.critical-spares-card { background: #fffdfa; border: 1px solid #fde8c4; }
+.critical-spares-card .prod-icon-box { background: #fef3c7; color: #d97706; }
+
+.spares-detailed-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 15px 0 30px 0;
+    padding-top: 20px;
+    border-top: 1px dashed #fcd34d;
+}
+.spare-cat-box h4 {
+    color: var(--primary);
+    font-size: 15px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #fcd34d;
+    padding-bottom: 6px;
+}
+.spare-cat-box h4 i { color: #d97706; margin-right: 6px; }
+.spare-cat-box ul { list-style: none; }
+.spare-cat-box ul li {
+    font-size: 13px;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 12px;
+}
+.spare-cat-box ul li::before {
+    content: "▪";
+    color: #d97706;
+    position: absolute;
+    left: 0;
+    top: -1px;
+}
+
+.spares-delivery-specs { background: #fef3c7; border-left-color: #d97706; color: #b45309; }
+
+.btn-product {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: var(--primary);
+    color: var(--white);
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+.btn-product:hover { background: var(--secondary); }
+.spare-btn { background: #d97706; }
+.spare-btn:hover { background: #b45309; }
+
+/* ==========================================================================
+   7. BRAND FRAMEWORKS & FOOTER STRUCTURE
+   ========================================================================== */
+.brand-frameworks { background: var(--dark-slate); color: var(--white); padding: 60px 0; }
+.brand-frameworks h3 { font-size: 22px; color: #cbd5e1; margin-bottom: 15px; }
+.brand-frameworks p { font-size: 15px; color: #94a3b8; max-width: 800px; margin: 0 auto 30px auto; line-height: 1.6; }
+.framework-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+.framework-tags span {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.solutions-cta { background: #f1f5f9; padding: 60px 0; border-top: 1px solid #e2e8f0; }
+.solutions-cta h2 { color: var(--primary); margin-bottom: 10px; }
+.solutions-cta p { max-width: 650px; margin: 0 auto 25px auto; }
+
+footer { background: var(--dark-slate); color: #64748b; padding: 30px 0; border-top: 1px solid #334155; }
+.footer-bottom { display: flex; justify-content: space-between; font-size: 14px; }
+
+/* ==========================================================================
+   8. MEDIA QUERIES & MOBILE NAVIGATION OVERRIDES
+   ========================================================================== */
+@media(max-width: 1024px) {
+    .size-large, .size-medium, .size-small { grid-column: span 6; }
+}
+
+@media(max-width: 768px) {
+    .top-bar .container { flex-direction: column; text-align: center; gap: 5px; }
+    
+    /* Reconfiguring hamburger activation states */
+    .menu-toggle { display: flex; }
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        background: var(--white);
+        width: 100%;
+        height: calc(100vh - 70px);
+        text-align: center;
+        transition: 0.4s ease-in-out;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        padding: 40px 0;
+        align-items: center;
+    }
+    
+    .nav-links.active { left: 0; }
+    .nav-links a { margin: 15px 0; width: 80%; display: block; padding: 10px 0; }
+    
+    /* Transforming Menu Button to an Close X shape when active */
+    .menu-toggle.active .bar:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+    .menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.active .bar:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+    .asymmetric-grid { display: flex; flex-direction: column; gap: 20px; }
+    .spares-detailed-grid { grid-template-columns: 1fr; gap: 20px; }
+    .prod-card { padding: 25px; }
+    .card-badge { position: relative; top: 0; right: 0; display: inline-block; margin-bottom: 15px; }
+    .footer-bottom { flex-direction: column; text-align: center; gap: 10px; }
+}
+
+
+/* ==========================================================================
+   SERVICES ASYMMETRICAL LAYOUT STYLE EXTENSIONS
+   ========================================================================== */
+
+/* Custom banner image background configuration for services context */
+.service-banner {
+    background: linear-gradient(rgba(15, 61, 89, 0.95), rgba(30, 41, 59, 0.98)), url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.services-grid-section { padding: 80px 0; background: #ffffff; }
+
+/* Flagship Focus configuration for the prime AMC service card module */
+.active-service-focus {
+    background: #fafcfb;
+    border: 1px solid #cceee5;
+    border-top: 4px solid var(--secondary);
+}
+
+/* Internal micro-grid configuration for the detailed AMC scope split */
+.amc-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 20px 0 30px 0;
+    padding-top: 25px;
+    border-top: 1px solid #edf2f7;
+}
+.amc-feature-item h5 {
+    color: var(--primary);
+    font-size: 15px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+.amc-feature-item h5 i {
+    color: var(--secondary);
+    margin-right: 8px;
+    font-size: 14px;
+}
+.amc-feature-item p {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Strategic highlighted treatment for Emergency Repair Response element */
+.emergency-repair-card {
+    background: #fffdfa;
+    border: 1px solid #fde8c4;
+}
+
+/* Mobile responsive fallback adjustments for the inner service blocks */
+@media(max-width: 991px) {
+    .amc-features-grid { grid-template-columns: 1fr; gap: 15px; }
+}
+
+
+/* ==========================================================================
+   LEASING & COMPLIANCE-AS-A-SERVICE STYLE EXTENSIONS
+   ========================================================================== */
+
+/* Unique background image treatment for the leasing banner */
+.leasing-banner {
+    background: linear-gradient(rgba(15, 61, 89, 0.95), rgba(30, 41, 59, 0.98)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+.leasing-intro-section { padding: 80px 0; background: #ffffff; }
+.intro-text h2 { color: var(--primary); font-size: 32px; line-height: 1.3; margin-bottom: 20px; }
+
+/* Structural card block detailing what is wrapped in the lease */
+.leasing-highlight-box {
+    background: var(--light-bg);
+    border: 1px solid #e2e8f0;
+    padding: 40px;
+    border-radius: 8px;
+    border-top: 4px solid var(--primary);
+}
+.leasing-highlight-box h4 { color: var(--primary); font-size: 18px; margin-bottom: 15px; }
+.leasing-highlight-box h4 i { color: var(--secondary); margin-right: 8px; }
+
+.leasing-included-list { list-style: none; margin-top: 20px; }
+.leasing-included-list li {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.leasing-included-list li i { color: var(--secondary); margin-right: 12px; font-size: 16px; }
+
+/* --- THE STRATEGIC EVALUATION COMPARISON TABLE --- */
+.comparison-table-section { padding: 80px 0; background: #f8fafc; border-top: 1px solid #e2e8f0; }
+
+.table-responsive { width: 100%; overflow-x: auto; margin-top: 40px; border-radius: 8px; border: 1px solid #e2e8f0; }
+.comparison-matrix { width: 100%; border-collapse: collapse; background: var(--white); text-align: left; font-size: 14px; min-width: 750px; }
+
+.comparison-matrix th, .comparison-matrix td { padding: 20px 25px; border-bottom: 1px solid #e2e8f0; line-height: 1.6; }
+.comparison-matrix th { background: var(--primary); color: var(--white); font-size: 16px; font-weight: 700; }
+
+/* Visual emphasis applied down the core selling column */
+.comparison-matrix th.highlight-column { background: #118468; }
+.comparison-matrix td.highlight-column { background: #f0fdf4; color: #14532d; font-size: 14.5px; border-left: 1px solid #bbf7d0; border-right: 1px solid #bbf7d0; }
+.comparison-matrix tr:last-child td.highlight-column { border-bottom: 2px solid #17b890; }
+
+.leasing-advantages { padding: 80px 0; background: #ffffff; }
+
+/* Responsive break overrides targeting table and grid layouts */
+@media(max-width: 768px) {
+    .leasing-highlight-box { padding: 25px 20px; }
+    .comparison-matrix th, .comparison-matrix td { padding: 15px; }
+}
+
+
+/* ==========================================================================
+   ADVANCED LEASING GRID MATRIX LAYOUT SYSTEM
+   ========================================================================== */
+
+/* Unique background image treatment for the leasing banner */
+.leasing-banner {
+    background: linear-gradient(rgba(15, 61, 89, 0.95), rgba(30, 41, 59, 0.98)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Premium Program Rollout Alert Box CSS styling */
+.rollout-alert-box {
+    background: #fffdf5;
+    border-left: 4px solid #d97706;
+    border-top: 1px solid #fef3c7;
+    border-right: 1px solid #fef3c7;
+    border-bottom: 1px solid #fef3c7;
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.03);
+}
+.alert-flex-layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+.alert-icon-wrapper {
+    background: #fef3c7;
+    color: #d97706;
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+.alert-content-wrapper h4 {
+    color: #78350f;
+    font-size: 16px;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+.alert-content-wrapper p {
+    color: #92400e;
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.leasing-intro-section { padding: 80px 0; background: #ffffff; }
+.intro-text h2 { color: var(--primary); font-size: 32px; line-height: 1.3; margin-bottom: 20px; }
+
+.leasing-highlight-box {
+    background: var(--light-bg);
+    border: 1px solid #e2e8f0;
+    padding: 40px;
+    border-radius: 8px;
+    border-top: 4px solid var(--primary);
+}
+.leasing-highlight-box h4 { color: var(--primary); font-size: 18px; margin-bottom: 15px; }
+.leasing-highlight-box h4 i { color: var(--secondary); margin-right: 8px; }
+
+.leasing-included-list { list-style: none; margin-top: 20px; }
+.leasing-included-list li {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.leasing-included-list li i { color: var(--secondary); margin-right: 12px; font-size: 14px; }
+
+/* --- CORE STRATEGIC MATRIX CONTAINER ENGINE --- */
+.comparison-table-section { padding: 80px 0; background: #f8fafc; border-top: 1px solid #e2e8f0; }
+
+.evaluation-matrix-container {
+    margin-top: 40px;
+    background: var(--white);
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(15, 61, 89, 0.02);
+    overflow: hidden;
+}
+
+/* Master Grid Column Ratios (Dimension: 25%, CapEx: 35%, OpEx: 40%) */
+.matrix-header-row, .matrix-data-row {
+    display: grid;
+    grid-template-columns: 3.2fr 4.3fr 4.5fr;
+}
+
+/* Header Columns */
+.matrix-header-row {
+    background: var(--primary);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 15px;
+    border-bottom: 2px solid #0b2e44;
+}
+.hdr-col { padding: 20px 25px; display: flex; align-items: center; }
+.hdr-col.opex-col-highlight { background: #118468; font-size: 16px; }
+
+/* Data Rows Base Layout */
+.matrix-data-row {
+    border-bottom: 1px solid #edf2f7;
+    transition: background 0.2s ease;
+}
+.matrix-data-row:last-child { border-bottom: none; }
+.matrix-data-row:hover { background: #fafbfd; }
+
+.data-col { padding: 25px; font-size: 14px; line-height: 1.6; color: var(--text-color); }
+.mobile-label { display: none; } /* Hidden on desktops */
+
+/* Dimension Cell Typography */
+.data-col.dimension-col {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    background: #fafbfd;
+    border-right: 1px solid #edf2f7;
+}
+.dim-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--light-bg);
+    border-radius: 4px;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    flex-shrink: 0;
+    border: 1px solid #e2e8f0;
+}
+.data-col.dimension-col h5 { font-size: 15px; color: var(--primary); font-weight: 700; margin-bottom: 2px; }
+.dim-desc { font-size: 12px; color: #64748b; display: block; line-height: 1.3; }
+
+/* CapEx Cell Layouts */
+.data-col.capex-col { border-right: 1px solid #edf2f7; }
+.capex-negative { color: #941c1c; font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+
+/* OpEx Premium Column Highlights */
+.data-col.opex-col-highlight {
+    background: #fcfdfa;
+    color: #1e293b;
+    border-left: 1px solid #e2ebd5;
+    border-right: 1px solid #e2ebd5;
+}
+.matrix-data-row:hover .data-col.opex-col-highlight { background: #f7faf2; }
+.opex-positive { color: #118468; font-weight: 700; font-size: 14.5px; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+.matrix-data-row:last-child .data-col.opex-col-highlight { border-bottom: 3px solid #17b890; }
+
+.leasing-advantages { padding: 80px 0; background: #ffffff; }
+
+/* ==========================================================================
+   MATRIX RESPONSIVE RESPONSIVENESS OVERRIDES
+   ========================================================================== */
+@media(max-width: 991px) {
+    .matrix-header-row { display: none; } /* Demolish standard headers on mobile grids */
+    
+    .matrix-header-row, .matrix-data-row { display: flex; flex-direction: column; }
+    .data-col { padding: 20px; }
+    
+    .data-col.dimension-col { background: var(--primary); color: var(--white); border-right: none; padding: 15px 20px; }
+    .data-col.dimension-col h5 { color: var(--white); font-size: 16px; }
+    .data-col.dimension-col .dim-icon { background: rgba(255,255,255,0.1); color: var(--white); border: none; }
+    .dim-desc { color: #94a3b8; }
+    
+    .data-col.capex-col { border-right: none; border-bottom: 1px dashed #e2e8f0; }
+    .data-col.opex-col-highlight { border-left: none; border-right: none; border-bottom: 2px solid #e2e8f0; background: #f6fbf9; }
+    
+    .mobile-label { display: block; font-size: 11px; text-transform: uppercase; font-weight: 700; color: #64748b; margin-bottom: 8px; letter-spacing: 0.5px; }
+    .data-col.dimension-col .mobile-label { display: none; }
+}
+
+
+/* ==========================================================================
+   DEDICATED ABOUT US CORPORATE DESIGN STYLES
+   ========================================================================== */
+
+/* Unique linear gradient background treatment for the corporate profile banner */
+.about-banner {
+    background: linear-gradient(rgba(15, 61, 89, 0.94), rgba(30, 41, 59, 0.97)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Corporate Profile Layout System */
+.corporate-profile-section {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.corporate-profile-section h2 {
+    color: var(--primary);
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 22px;
+}
+
+.corporate-profile-section p {
+    color: var(--text-color);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+/* Metrics Dashboard Panel Layout */
+.metrics-asymmetric-panel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.metric-card-item {
+    background: #f8fafc;
+    border: 1px solid #edf2f7;
+    padding: 30px 25px;
+    border-radius: 6px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(15, 61, 89, 0.04);
+}
+
+.metric-card-item h3 {
+    color: var(--primary);
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+}
+
+.metric-card-item.highlight-border {
+    border-left: 4px solid var(--secondary);
+    background: #fcfdfd;
+}
+
+.metric-card-item h5 {
+    color: var(--primary);
+    font-size: 14.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.metric-card-item p {
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Foundational Section Wrapper */
+.foundational-pillars-section {
+    padding: 80px 0;
+    background: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/* Responsive Grid Adaptation Overrides */
+@media (max-width: 991px) {
+    .metrics-asymmetric-panel {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 35px;
+    }
+    .corporate-profile-section h2 {
+        font-size: 26px;
+    }
+}
+
+
+
+/* ==========================================================================
+   GLOBAL DESIGN VARIABLES & RESET ENGINE
+   ========================================================================== */
+:root {
+    --primary: #0a192f;        /* Deep Premium Navy Anchor */
+    --secondary: #17b890;      /* Emerald Technical Accents */
+    --text-color: #334155;     /* High Contrast Slate Text */
+    --text-light: #64748b;    /* Secondary Structural Muted Slate */
+    --light-bg: #f8fafc;      /* Cream Ice Element Backgrounds */
+    --white: #ffffff;
+    --border-color: #e2e8f0;   /* Razor-Thin Section Separators */
+    --font-main: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: var(--white);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Base Structural Layout Enclosures */
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 50px; align-items: center; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+
+/* ==========================================================================
+   TOP INFO BAR & EXECUTIVE MAIN HEADER
+   ========================================================================== */
+.top-bar {
+    background: #071120;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 10px 0;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.top-bar-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-info-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.top-info-group i {
+    color: var(--secondary);
+}
+
+.top-info-group .separator {
+    color: #334155;
+}
+
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    background: rgba(23, 184, 144, 0.1);
+    color: var(--secondary);
+    padding: 3px 10px;
+    border-radius: 3px;
+}
+
+.pulse-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--secondary);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(23, 184, 144, 0.4);
+    animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(23, 184, 144, 0.5); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(23, 184, 144, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(23, 184, 144, 0); }
+}
+
+.main-header {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+}
+
+.logo h2 span {
+    color: var(--secondary);
+    font-weight: 400;
+    margin-left: 4px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #475569;
+    font-weight: 500;
+    font-size: 14.5px;
+    transition: var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary);
+}
+
+.btn-nav {
+    background: var(--primary);
+    color: var(--white) !important;
+    padding: 9px 18px;
+    border-radius: 4px;
+    font-size: 13.5px !important;
+}
+
+.btn-nav:hover {
+    background: #1e293b;
+}
+
+/* Mobile responsive navigation controls */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 22px;
+    height: 2px;
+    background: var(--primary);
+    transition: var(--transition);
+}
+
+/* ==========================================================================
+   HERO DISPLAY MATRIX
+   ========================================================================== */
+.hero {
+    padding: 135px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 44px;
+    line-height: 1.25;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -1px;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.65;
+    color: #cbd5e1;
+    margin-bottom: 35px;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* System Typography Button Architecture */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-size: 14.5px;
+    font-weight: 600;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(23, 184, 144, 0.25);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ==========================================================================
+   HIGHLIGHT COHORTS GRID SECTION
+   ========================================================================== */
+.highlights {
+    padding: 0;
+    margin-top: -50px;
+    position: relative;
+    z-index: 20;
+}
+
+.highlight-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px 20px; /* Reduced padding to make the box smaller */
+    box-shadow: 0 4px 15px rgba(10, 25, 47, 0.04); /* Softer, more premium shadow */
+    transition: var(--transition);
+    text-align: center; /* Centers the text for a neater look */
+}
+
+.highlight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(10, 25, 47, 0.08);
+    border-color: #cbd5e1;
+}
+
+.icon-wrapper {
+    font-size: 22px; /* Slightly smaller icon */
+    color: var(--secondary);
+    background: rgba(23, 184, 144, 0.08); /* Adds a soft green circular background */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Makes the icon background a perfect circle */
+    margin: 0 auto 15px auto; /* Centers the icon and reduces bottom margin */
+}
+
+.highlight-card h3 {
+    color: var(--primary);
+    font-size: 16px; /* Slightly smaller heading */
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.highlight-card p {
+    font-size: 13px; /* Slightly smaller paragraph text */
+    color: var(--text-light);
+    line-height: 1.5;
+    margin: 0; /* Removes extra bottom spacing */
+}
+
+/* ==========================================================================
+   CORPORATE ABOUT & IDENTITY BLUEPRINT
+   ========================================================================== */
+.about-section {
+    padding: 110px 0 80px 0;
+    background: var(--white);
+}
+
+.section-tag {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.section-tag.center { text-align: center; }
+
+.about-text h2 {
+    font-size: 32px;
+    line-height: 1.3;
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.divider {
+    width: 50px;
+    height: 3px;
+    background: var(--secondary);
+    margin: 18px 0 25px 0;
+}
+
+.divider.center { margin: 15px auto 0 auto; }
+
+.lead-text {
+    font-size: 15.5px;
+    color: var(--primary);
+    line-height: 1.65;
+}
+
+.about-text p {
+    font-size: 14.5px;
+    color: var(--text-color);
+    margin-bottom: 18px;
+}
+
+.vision-quote {
+    border-left: 3px solid var(--secondary);
+    padding-left: 20px;
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+/* Blueprint Architecture Card Design */
+.blueprint-card {
+    background: var(--primary);
+    border-radius: 6px;
+    padding: 40px;
+    color: var(--white);
+    box-shadow: 0 15px 35px rgba(10, 25, 47, 0.15);
+}
+
+.blueprint-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 18px;
+    margin-bottom: 25px;
+}
+
+.blueprint-header i {
+    font-size: 32px;
+    color: var(--secondary);
+}
+
+.blueprint-header h4 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+}
+
+.blueprint-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.blueprint-list li {
+    font-size: 13.5px;
+    color: #cbd5e1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mono-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    color: var(--secondary);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================================
+   SOLUTIONS MATRIX SECTION
+   ========================================================================== */
+.solutions-section {
+    padding: 90px 0;
+    background: var(--light-bg);
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 50px auto;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    color: var(--primary);
+    font-weight: 800;
+    margin-top: 5px;
+}
+
+.section-header p {
+    font-size: 15px;
+    color: var(--text-light);
+    margin-top: 10px;
+}
+
+.solution-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 45px 35px;
+    transition: var(--transition);
+}
+
+.solution-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(10, 25, 47, 0.04);
+    border-color: #cbd5e1;
+}
+
+.card-icon-head {
+    font-size: 24px;
+    color: var(--primary);
+    background: var(--light-bg);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-bottom: 22px;
+}
+
+.solution-card h3 {
+    font-size: 18px;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.solution-card p {
+    font-size: 14px;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   PROCUREMENT REGISTRATION FORM & RFQ CONTAINER
+   ========================================================================== */
+.contact-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.contact-info h2 {
+    font-size: 34px;
+    color: var(--primary);
+    font-weight: 800;
+    line-height: 1.25;
+    margin-top: 5px;
+}
+
+.contact-info p {
+    font-size: 15px;
+    color: var(--text-light);
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+.info-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.info-icon {
+    font-size: 18px;
+    color: var(--secondary);
+    background: rgba(23, 184, 144, 0.08);
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.info-item h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.contact-highlight {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 2px;
+}
+
+/* Premium Form Input Frame Design */
+.contact-form-container {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-shadow: 0 15px 40px rgba(10, 25, 47, 0.05);
+    padding: 40px;
+}
+
+.form-header {
+    margin-bottom: 25px;
+}
+
+.form-header h4 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.form-header p {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-top: 2px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 6px;
+}
+
+.form-group input, .select-wrapper select {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-family: var(--font-main);
+    font-size: 14px;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.form-group input:focus, .select-wrapper select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(10, 25, 47, 0.05);
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.btn-block {
+    width: 100%;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 13px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.btn-block:hover {
+    background: #1e293b;
+}
+
+/* ==========================================================================
+   CORPORATE FOOTER INTERFACE
+   ========================================================================== */
+footer {
+    background: #071120;
+    padding: 30px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    font-size: 13.5px;
+}
+
+.footer-content-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-credit {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: #475569;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   DEFENSIVE RESPONSIVE DESIGN MEDIA OVERRIDES
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .grid-3 { grid-template-columns: repeat(2, 1fr); }
+    .hero h1 { font-size: 36px; }
+}
+
+@media (max-width: 768px) {
+    .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; gap: 30px; }
+    .top-bar { display: none; }
+    .hero { padding: 90px 0; }
+    .hero h1 { font-size: 30px; }
+    .hero p { font-size: 15px; }
+    
+    /* Responsive navbar transformation matrix */
+    .menu-toggle { display: flex; }
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        display: none;
+    }
+    
+    .nav-links.active { display: flex; }
+    .btn-nav { text-align: center; width: 100%; }
+    .footer-content-wrap { flex-direction: column; text-align: center; }
+}
+
+
+/* ==========================================================================
+   EXPANDED CORPORATE FOOTER INTERFACE
+   ========================================================================== */
+.main-footer {
+    background: #050d1a; /* Deep, premium dark blue */
+    padding: 70px 0 20px 0;
+    color: #94a3b8;
+    border-top: 4px solid var(--secondary);
+    font-size: 14px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.2fr 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+/* Brand Column */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-logo .logo-box {
+    background: var(--primary);
+    color: var(--white);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-logo .logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.footer-logo .text-top {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.footer-logo .text-bottom {
+    color: #64748b;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    max-width: 350px;
+}
+
+.footer-contact {
+    list-style: none;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: #cbd5e1;
+}
+
+.footer-contact i {
+    color: var(--secondary);
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Link Columns */
+.footer-col h4 {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: var(--secondary);
+    transform: translateX(5px);
+}
+
+.region-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #94a3b8;
+}
+
+.region-list i {
+    color: var(--secondary);
+    font-size: 12px;
+}
+
+/* Compliance Badges */
+.footer-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.compliance-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #cbd5e1;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.compliance-badge i {
+    color: var(--secondary);
+}
+
+/* Footer Bottom Bar */
+.footer-bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 13px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-legal-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-legal-links a:hover {
+    color: var(--white);
+}
+
+.footer-legal-links .separator {
+    margin: 0 10px;
+    color: #334155;
+}
+
+/* Responsive Footer */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-bottom-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+
+@media (max-width: 1024px) {
+    .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+}
+

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Products | JIYAR Environmental Technologies</title>
+    <meta name="description" content="Turnkey industrial instrumentation calibration, repair, and certified AMC maintenance contracts across Eastern India. Jamshedpur-localized emergency response.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Fonts & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 font-['Inter',sans-serif]">
+
+    <!-- Navigation Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-200 transition-all duration-300">
+        <div class="w-full px-6 lg:px-12 py-3 lg:py-4 flex items-center justify-between">
+            <div class="flex-1 flex justify-start">
+                <a href="index.html" class="flex items-center space-x-3 group text-decoration-none">
+                    <div class="bg-[var(--primary)] text-white px-3 py-2 rounded-lg font-bold text-xl tracking-wider shadow-md group-hover:bg-[var(--secondary)] transition-colors duration-300">
+                        JIYAR
+                    </div>
+                    <div class="hidden xl:flex flex-col leading-none justify-center">
+                        <span class="block text-xs font-bold text-[var(--primary)] tracking-widest mb-0.5">ENVIRONMENTAL</span>
+                        <span class="block text-[10px] text-gray-500 uppercase tracking-wider">Technologies Pvt. Ltd.</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="hidden lg:flex justify-center space-x-6" id="desktop-nav">
+                <a href="index.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    Home
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="about.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    About Us
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="solutions.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    Solutions
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="services.html" class="nav-link relative px-2 py-2 text-sm font-bold text-[var(--primary)] after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-[var(--secondary)] after:left-0 after:bottom-0">
+                    Services
+                </a>
+                <a href="products.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    Products
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="leasing.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    Leasing
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="smart-monitoring.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    Smart Monitoring
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+
+            <div class="flex-1 flex justify-end items-center space-x-4">
+                <a href="login.html" class="hidden lg:flex text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors items-center gap-2 mr-4">
+                    <i class="fa-solid fa-lock text-[var(--secondary)]"></i> Client Login
+                </a>
+                <a href="index.html#contact" class="hidden md:inline-flex items-center justify-center gap-2 bg-[var(--secondary)] hover:bg-[#14a07d] text-[var(--primary)] font-extrabold text-xs uppercase tracking-wider px-6 py-3 rounded-md shadow-lg shadow-[var(--secondary)]/30 transition-all duration-300 hover:-translate-y-0.5">
+                    <span>Request Survey</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden text-[var(--primary)] hover:text-[var(--secondary)] focus:outline-none p-2 transition-colors">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Engineered Hero Banner -->
+    <!-- <section class="page-banner bg-[var(--primary)] text-white py-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <div class="container relative z-10 text-center max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Integrated Instrumentation & Supported Frameworks</h1>
+            <p class="text-lg text-slate-300 leading-relaxed">
+                Sourcing world-class analytical hardware from global OEM leaders and engineering them into rugged turnkey monitoring solutions for heavy industry.
+            </p>
+            <div class="w-16 h-1 bg-[var(--secondary)] mx-auto mt-8"></div>
+        </div>
+    </section> -->
+
+
+     <section class="page-banner">
+        <div class="container">
+            <h1>Integrated Instrumentation & Supported Frameworks</h1>
+            <p>Sourcing world-class analytical hardware from global OEM leaders and engineering them into rugged turnkey monitoring solutions for heavy industry.</p>
+            <div class="divider"></div>
+        </div>
+    </section>
+
+
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="philosophy-box">
+                <span class="philosophy-badge">Integration Architecture</span>
+                <h2>Our Technology Sourcing & Integration Philosophy</h2>
+                <p>At JIYAR, we operate as an <strong>independent system integrator and turnkey solution provider</strong>. We do not lock our clients into a single manufacturing line; instead, we source high-precision analytical core components exclusively from trusted global OEMs that carry international <strong>USEPA, TUV, and MCERTS certifications</strong>.</p>
+                <p>Our engineering team builds custom-tailored sample conditioning systems, climate-controlled villas, fluidic line networks, and secure Industrial IoT telemetry wrappers around these components. This ensures maximum uptime and flawless data continuity in the harshest industrial conditions across Eastern India.</p>
+                
+                <div class="philosophy-benefits grid-3">
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-shuffle"></i>
+                        <h4>Brand Agility</h4>
+                        <p>Sourcing the precise analyzer technology that fits your exact process chemistry and duct constraints.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-window-restore"></i>
+                        <h4>Single Window Control</h4>
+                        <p>One localized partner managing procurement, panel fabrication, site installation, and compliance approvals.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-warehouse"></i>
+                        <h4>Regional Spares Vault</h4>
+                        <p>Eliminating long overseas factory wait times with an active component repository based directly in Jamshedpur.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Products Section -->
+    <section class="py-20 px-6 container mx-auto max-w-7xl">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-[var(--primary)] mb-4">Engineered Systems & Component Store</h2>
+            <p class="text-sm text-slate-600">Explore our integration categories. We source core cells internationally and engineer the deployment system locally.</p>
+            <div class="w-16 h-1 bg-[var(--secondary)] mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- CEMS Panels -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between border-t-4 border-t-[var(--primary)]">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-1 rounded uppercase">Flagship Integration</span>
+                        <i class="fa-solid fa-microchip text-slate-300 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-[var(--primary)] mb-3">CEMS Analyzer Panels</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-6">Custom-fabricated emission monitoring panels combining globally sourced NDIR/UV-DOAS gas cells with localized multi-stage sample conditioning filtration assemblies. Engineered specifically to survive high vibration and extreme heat.</p>
+                    <div class="space-y-2 text-xs font-medium bg-slate-50 p-4 rounded-lg mb-6">
+                        <p class="text-slate-500">Core Tech: <span class="text-slate-900 font-bold">Global OEM Leaders</span></p>
+                        <p class="text-slate-500">Parameters: <span class="text-slate-900 font-bold">SO₂, NOx, CO, CO₂, O₂, HCl, TVOCs</span></p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-[11px] font-bold text-slate-500 mb-4"><i class="fa-solid fa-repeat text-[var(--secondary)] mr-1"></i> Outright Purchase / 36-Month Lease</p>
+                    <a href="index.html#contact" class="block text-center w-full bg-[var(--primary)] text-white text-xs font-bold py-3 rounded hover:bg-slate-800 transition">Request Integration Specs</a>
+                </div>
+            </div>
+
+            <!-- AAQMS Shelters -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between border-t-4 border-t-[var(--primary)]">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="bg-slate-100 text-slate-700 text-[10px] font-bold px-2 py-1 rounded uppercase">Turnkey Engineering</span>
+                        <i class="fa-solid fa-house-laptop text-slate-300 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-[var(--primary)] mb-3">Ambient Air Stations (AAQMS)</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-6">Complete walk-in or compact shelters engineered locally with internal climate control, data loggers, and top-tier ambient particulate modules for boundary and mining tracking arrays.</p>
+                    <div class="space-y-2 text-xs font-medium bg-slate-50 p-4 rounded-lg mb-6">
+                        <p class="text-slate-500">Enclosure: <span class="text-slate-900 font-bold">JIYAR Weatherproof Shelters</span></p>
+                        <p class="text-slate-500">Tracking: <span class="text-slate-900 font-bold">PM2.5, PM10, Criteria Gases</span></p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-[11px] font-bold text-slate-500 mb-4"><i class="fa-solid fa-repeat text-[var(--secondary)] mr-1"></i> OpEx Lease Option Available</p>
+                    <a href="index.html#contact" class="block text-center w-full bg-[var(--primary)] text-white text-xs font-bold py-3 rounded hover:bg-slate-800 transition">Request Station Layout</a>
+                </div>
+            </div>
+
+            <!-- Liquid Quality Probes -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between border-t-4 border-t-[var(--primary)]">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="bg-slate-100 text-slate-700 text-[10px] font-bold px-2 py-1 rounded uppercase">Sourcing & Deployment</span>
+                        <i class="fa-solid fa-droplet text-slate-300 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-[var(--primary)] mb-3">Industrial Liquid Quality Probes</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-6">Robust multi-parameter water quality arrays combining field-proven optical sensors with custom auto-cleaning pneumatic arrays designed specifically to counter extreme fouling biological loops.</p>
+                    <div class="space-y-2 text-xs font-medium bg-slate-50 p-4 rounded-lg mb-6">
+                        <p class="text-slate-500">Interface: <span class="text-slate-900 font-bold">RS485 Modbus Protocol</span></p>
+                        <p class="text-slate-500">Parameters: <span class="text-slate-900 font-bold">pH, DO, COD, TOC, TSS</span></p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-[11px] font-bold text-slate-500 mb-4"><i class="fa-solid fa-check text-[var(--secondary)] mr-1"></i> Auto-Cleaning Infrastructure Integrated</p>
+                    <a href="index.html#contact" class="block text-center w-full bg-[var(--primary)] text-white text-xs font-bold py-3 rounded hover:bg-slate-800 transition">Request Probe Specs</a>
+                </div>
+            </div>
+
+            <!-- JIYAR DataSetu Gateway -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between border-t-4 border-t-[var(--secondary)]">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-1 rounded uppercase">Industrial IoT Gateway</span>
+                        <i class="fa-solid fa-tower-cell text-[var(--secondary)] text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-[var(--primary)] mb-3">JIYAR DataSetu™ DAHS Gateways</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-6">Industrial-grade secure telemetry hardware programmed by JIYAR to map Modbus and analog signals safely. Acts as the primary physical bridge to push encrypted environmental compliance data to CPCB/SPCB central servers.</p>
+                    <div class="space-y-2 text-xs font-medium bg-slate-50 p-4 rounded-lg mb-6">
+                        <p class="text-slate-500">Network: <span class="text-slate-900 font-bold">4G/5G, LoRaWAN, Ethernet</span></p>
+                        <p class="text-slate-500">Vault Security: <span class="text-slate-900 font-bold">Local Edge Data Caching & Buffer</span></p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-[11px] font-bold text-emerald-600 mb-4"><i class="fa-solid fa-cloud mr-1"></i> Native Integration with Insight™ Cloud</p>
+                    <a href="index.html#contact" class="block text-center w-full bg-[var(--secondary)] text-[var(--primary)] text-xs font-bold py-3 rounded hover:bg-[#14a07d] hover:text-white transition">Telemetry Mapping Scheme</a>
+                </div>
+            </div>
+
+            <!-- Dust Tracking -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between border-t-4 border-t-[var(--primary)]">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="bg-slate-100 text-slate-700 text-[10px] font-bold px-2 py-1 rounded uppercase">Dust Tracking</span>
+                        <i class="fa-solid fa-eye text-slate-300 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-[var(--primary)] mb-3">Optical Dust & Opacity Systems</h3>
+                    <p class="text-xs text-slate-600 leading-relaxed mb-6">Sourcing high-reliability cross-stack optical transmissometers and engineering custom pneumatic air blow-back setups to protect fragile lenses from abrasive kiln dust in cement and steel units.</p>
+                    <div class="space-y-2 text-xs font-medium bg-slate-50 p-4 rounded-lg mb-6">
+                        <p class="text-slate-500">Optics: <span class="text-slate-900 font-bold">Premium Industrial Grade Core</span></p>
+                        <p class="text-slate-500">Purge Assembly: <span class="text-slate-900 font-bold">JIYAR Automated Blow-Back</span></p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-[11px] font-bold text-slate-500 mb-4"><i class="fa-solid fa-shield mr-1"></i> Lens Condensation Protection Array</p>
+                    <a href="index.html#contact" class="block text-center w-full bg-[var(--primary)] text-white text-xs font-bold py-3 rounded hover:bg-slate-800 transition">Request Optic Manuals</a>
+                </div>
+            </div>
+
+            <!-- JIYAR Insight Cloud -->
+            <div class="bg-slate-900 p-6 rounded-xl border border-slate-700 shadow-lg flex flex-col justify-between border-t-4 border-t-[var(--secondary)] text-white">
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="bg-[var(--secondary)] text-[var(--primary)] text-[10px] font-bold px-2 py-1 rounded uppercase">Compliance Software</span>
+                        <i class="fa-solid fa-cloud-arrow-up text-[var(--secondary)] text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-3">JIYAR Insight™ Software OS</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed mb-6">The modern central analytics engine for environmental metrics. Processes raw data sets, tracks instrumentation operational behavior, provides early telemetry warnings, and updates internal dashboards securely.</p>
+                    <div class="space-y-2 text-xs font-mono bg-white/5 p-4 rounded-lg mb-6 text-slate-300">
+                        <p>Analytics: <span class="text-white font-bold">Insight™ LiveView Engine</span></p>
+                        <p>Compliance: <span class="text-white font-bold">Automated SPCB Protocol Formats</span></p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-[11px] font-bold text-[var(--secondary)] mb-4"><i class="fa-solid fa-circle-check mr-1"></i> Real-time Telemetry Auditing Module</p>
+                    <a href="smart-monitoring.html" class="block text-center w-full bg-[var(--secondary)] text-[var(--primary)] text-xs font-bold py-3 rounded hover:bg-white hover:text-[var(--primary)] transition">Explore Dashboard Framework</a>
+                </div>
+            </div>
+
+            <!-- Massive Critical Spares Section -->
+            <div class="lg:col-span-3 bg-white border border-slate-200 rounded-2xl p-8 shadow-sm mt-4">
+                <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-6 mb-6">
+                    <div>
+                        <span class="text-xs font-bold text-orange-600 bg-orange-50 px-2.5 py-1 rounded-md uppercase tracking-wider mb-2 block w-fit"><i class="fa-solid fa-warehouse"></i> Regional Spares Vault</span>
+                        <h3 class="text-xl lg:text-2xl font-bold text-[var(--primary)]">Multi-Brand Cross-Compatible Components</h3>
+                        <p class="text-xs text-slate-500 mt-1">We maintain an expansive localized inventory of high-grade components designed to fit and perform inside top-tier global analyzer systems.</p>
+                    </div>
+                    <span class="text-xs font-mono font-bold bg-slate-100 text-slate-700 px-4 py-2 rounded-lg border border-slate-200"><i class="fa-solid fa-location-crosshairs text-[var(--secondary)]"></i> Jamshedpur Stock Ready</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-sm text-[var(--primary)] uppercase tracking-wider mb-4 border-b border-slate-200 pb-2 flex items-center gap-2"><i class="fa-solid fa-wind text-[var(--secondary)]"></i> Gas Sampling Fluidics</h4>
+                        <ul class="space-y-4 text-xs">
+                            <li><strong class="block text-slate-900">PTFE-Coated Diaphragm Pumps:</strong> High-vacuum, chemical-resistant anti-corrosion sampling cell pumps.</li>
+                            <li><strong class="block text-slate-900">Heated Sample Lines:</strong> Regulated 180°C core line networks preventing trace acid condensation loops.</li>
+                            <li><strong class="block text-slate-900">Peltier Gas Chillers:</strong> Rapid moisture separation infrastructure equipped with auto peristaltic pumps.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-sm text-[var(--primary)] uppercase tracking-wider mb-4 border-b border-slate-200 pb-2 flex items-center gap-2"><i class="fa-solid fa-filter text-[var(--secondary)]"></i> Filtration Elements</h4>
+                        <ul class="space-y-4 text-xs">
+                            <li><strong class="block text-slate-900">Primary Ceramic Probes:</strong> High-porosity dust-shedding heated stack entry filter elements.</li>
+                            <li><strong class="block text-slate-900">Coalescing & Moisture Filters:</strong> Secondary borosilicate fine particle liquid separators.</li>
+                            <li><strong class="block text-slate-900">Acid Mist Separators:</strong> Specialized cross-flow membranes shielding sensitive analytical gas cells.</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-sm text-[var(--primary)] uppercase tracking-wider mb-4 border-b border-slate-200 pb-2 flex items-center gap-2"><i class="fa-solid fa-bolt text-[var(--secondary)]"></i> Sensors & Consumables</h4>
+                        <ul class="space-y-4 text-xs">
+                            <li><strong class="block text-slate-900">Replacement Cells:</strong> Paramagnetic, Zirconia, and electrochemical O₂, CO, and NO sensor cores.</li>
+                            <li><strong class="block text-slate-900">Peristaltic Tubing & Seals:</strong> High-temperature chemical Viton O-rings, seals, and continuous lines.</li>
+                            <li><strong class="block text-slate-900">Calibration Accessories:</strong> Certified double-stage SS316 pressure regulators and capillary tubes.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-6 pt-5 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 bg-slate-50 -mx-8 -mb-8 p-8 rounded-b-2xl">
+                    <p class="text-xs font-medium text-slate-600"><i class="fa-solid fa-truck-fast text-orange-600 mr-1"></i> <strong>Logistics Assurance:</strong> 24-48 Hour Hot-Swap Delivery across Jharkhand, Odisha, and West Bengal sectors.</p>
+                    <a href="index.html#contact" class="bg-orange-600 text-white text-xs font-bold px-5 py-3 rounded-md hover:bg-orange-700 transition">Query Spare Part Stock Availability</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="compliance-standards" style="background: #f8fafc; padding: 40px 0; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container" style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px; text-align: center;">
+        <div class="standard-item" style="flex: 1; min-width: 200px;">
+            <i class="fa-solid fa-award" style="font-size: 28px; color: var(--secondary); margin-bottom: 10px;"></i>
+            <h4 style="color: var(--primary); font-size: 16px; margin-bottom: 5px;">USEPA Compliant</h4>
+            <p style="font-size: 13px; color: #64748b;">Sourced analyzer cores adhere to strict US Environmental Protection Agency design standards.</p>
+        </div>
+        <div class="standard-item" style="flex: 1; min-width: 200px;">
+            <i class="fa-solid fa-shield-halved" style="font-size: 28px; color: var(--secondary); margin-bottom: 10px;"></i>
+            <h4 style="color: var(--primary); font-size: 16px; margin-bottom: 5px;">TUV Certified</h4>
+            <p style="font-size: 13px; color: #64748b;">Validating optical and chemical measurements under strict European performance testing protocols.</p>
+        </div>
+        <div class="standard-item" style="flex: 1; min-width: 200px;">
+            <i class="fa-solid fa-clipboard-check" style="font-size: 28px; color: var(--secondary); margin-bottom: 10px;"></i>
+            <h4 style="color: var(--primary); font-size: 16px; margin-bottom: 5px;">CPCB/SPCB Ready</h4>
+            <p style="font-size: 13px; color: #64748b;">Engineered fluidics and software templates explicitly aligned with Indian statutory data protocols.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-[var(--primary)] text-center text-white">
+        <div class="container max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">Ready to Transition Your AMC to a Reliable Local Team?</h2>
+            <p class="text-slate-300 mb-8 font-medium">Connect with our Jamshedpur operational lab today to receive a highly detailed, component-level service quote tailored for your site's exact instrumentation matrix.</p>
+            <a href="index.html#contact" class="inline-flex items-center gap-2 bg-[var(--secondary)] hover:bg-[#14a07d] text-[var(--primary)] font-extrabold px-8 py-4 rounded-md transition-all shadow-lg hover:-translate-y-1 uppercase tracking-wider">
+                Request Service Proposal <i class="fa-solid fa-file-signature"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Master Footer -->
+    <!-- Expanded Master Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand & Identity -->
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">
+                        <div class="logo-box">JIYAR</div>
+                        <div class="logo-text">
+                            <span class="text-top">ENVIRONMENTAL</span>
+                            <span class="text-bottom">Technologies Pvt. Ltd.</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Your single-window partner for industrial environmental compliance, precision instrumentation, and smart telemetry across Eastern India.</p>
+                    <ul class="footer-contact">
+                        <li><i class="fa-solid fa-location-dot"></i> Bharam Toli, Bariatu, Near Don Bosco church, Ranchi, Jharkhand (HQ)</li>
+                        <li><i class="fa-solid fa-phone"></i> +91 9110124331, +91 9430100514</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@jiyar.in</li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4>Company Profile</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="industries.html">Sectors Served</a></li>
+                        <li><a href="#contact">Request Compliance Audit</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Core Solutions -->
+                <div class="footer-col">
+                    <h4>Solutions & Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">AMC & Instrumentation</a></li>
+                        <li><a href="solutions.html">Integration & Telemetry</a></li>
+                        <li><a href="products.html">Analyzers & Critical Spares</a></li>
+                        <li><a href="leasing.html">Turnkey Leasing (HaaS)</a></li>
+                        <li><a href="smart-monitoring.html">JIYAR Insight™ Cloud Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Regions & Certifications -->
+                <div class="footer-col">
+                    <h4>Operational Reach</h4>
+                    <ul class="footer-links region-list">
+                        <li><i class="fa-solid fa-map-pin"></i> Jharkhand</li>
+                        <li><i class="fa-solid fa-map-pin"></i> Odisha</li>
+                        <li><i class="fa-solid fa-map-pin"></i> Chhatisgarh</li>
+                        <li><i class="fa-solid fa-map-pin"></i> West Bengal</li>
+                    </ul>
+                    <div class="footer-badges">
+                        <span class="compliance-badge"><i class="fa-solid fa-check-circle"></i> CPCB Ready</span>
+                        <span class="compliance-badge"><i class="fa-solid fa-check-circle"></i> USEPA Standards</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 JIYAR Environmental Technologies Pvt. Ltd. All Rights Reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="terms-conditions.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenuContainer = document.getElementById('nav-menu-container');
+
+        if(mobileMenuBtn && navMenuContainer) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                navMenuContainer.classList.toggle('active');
+            });
+        }
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

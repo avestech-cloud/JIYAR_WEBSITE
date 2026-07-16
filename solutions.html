@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Solutions | JIYAR Environmental Technologies</title>
+    <meta name="description" content="Turnkey industrial instrumentation calibration, repair, and certified AMC maintenance contracts across Eastern India. Jamshedpur-localized emergency response.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Fonts & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 font-['Inter',sans-serif]">
+
+    <!-- Navigation Header -->
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-200 transition-all duration-300">
+        <div class="w-full px-6 lg:px-12 py-3 lg:py-4 flex items-center justify-between">
+            <div class="flex-1 flex justify-start">
+                <a href="index.html" class="flex items-center space-x-3 group text-decoration-none">
+                    <div class="bg-[var(--primary)] text-white px-3 py-2 rounded-lg font-bold text-xl tracking-wider shadow-md group-hover:bg-[var(--secondary)] transition-colors duration-300">
+                        JIYAR
+                    </div>
+                    <div class="hidden xl:flex flex-col leading-none justify-center">
+                        <span class="block text-xs font-bold text-[var(--primary)] tracking-widest mb-0.5">ENVIRONMENTAL</span>
+                        <span class="block text-[10px] text-gray-500 uppercase tracking-wider">Technologies Pvt. Ltd.</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="hidden lg:flex justify-center space-x-6" id="desktop-nav">
+                <a href="index.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    Home
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="about.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    About Us
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="solutions.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    Solutions
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="services.html" class="nav-link relative px-2 py-2 text-sm font-bold text-[var(--primary)] after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-[var(--secondary)] after:left-0 after:bottom-0">
+                    Services
+                </a>
+                <a href="products.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    Products
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="leasing.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    Leasing
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="smart-monitoring.html" class="nav-link relative px-2 py-2 text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors group">
+                    Smart Monitoring
+                    <span class="nav-underline absolute w-0 h-0.5 bg-[var(--secondary)] left-0 bottom-0 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+
+            <div class="flex-1 flex justify-end items-center space-x-4">
+                <a href="login.html" class="hidden lg:flex text-sm font-bold text-gray-600 hover:text-[var(--primary)] transition-colors items-center gap-2 mr-4">
+                    <i class="fa-solid fa-lock text-[var(--secondary)]"></i> Client Login
+                </a>
+                <a href="index.html#contact" class="hidden md:inline-flex items-center justify-center gap-2 bg-[var(--secondary)] hover:bg-[#14a07d] text-[var(--primary)] font-extrabold text-xs uppercase tracking-wider px-6 py-3 rounded-md shadow-lg shadow-[var(--secondary)]/30 transition-all duration-300 hover:-translate-y-0.5">
+                    <span>Request Survey</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+                <button id="mobile-menu-btn" class="lg:hidden text-[var(--primary)] hover:text-[var(--secondary)] focus:outline-none p-2 transition-colors">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Engineered Hero Banner -->
+    <!-- <section class="page-banner bg-[var(--primary)] text-white py-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        <div class="container relative z-10 text-center max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-6">End-to-End Environmental Compliance Solutions</h1>
+            <p class="text-lg text-slate-300 leading-relaxed">
+                Maximizing system uptime, protecting analytical structural assets, and executing precision metrology calibrations to validate continuous regulatory compliance.
+            </p>
+            <div class="w-16 h-1 bg-[var(--secondary)] mx-auto mt-8"></div>
+        </div>
+    </section> -->
+    <!-- Master Solutions Framework -->
+
+
+    <section class="page-banner" style="background: linear-gradient(rgba(15, 61, 89, 0.96), rgba(30, 41, 59, 0.98)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center;">
+        <div class="container">
+            <h1>End-to-End Environmental Compliance Solutions</h1>
+            <p>From precision instrumentation and smart telemetry to zero-CAPEX leasing models, we architect the frameworks that keep heavy industries running seamlessly.</p>
+            <div class="divider"></div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-transparent">
+        <div class="container mx-auto max-w-7xl px-6">
+
+            <!-- 01: CEMS (Text L, Card R) -->
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center py-20 border-b border-slate-200/60">
+                <div class="order-2 lg:order-1 relative z-10">
+                    <span class="text-[10px] font-bold text-slate-400 tracking-[0.2em] uppercase block mb-3">01 / Point Source Emissions</span>
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-[var(--primary)] mb-6 leading-tight">Continuous Emission Monitoring Systems (CEMS)</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Our CEMS deployment strategy handles harsh industrial stacks without losing data integrity. We build and maintain extraction systems that survive extreme temperatures, heavy moisture, and high particulate loads to keep your site fully aligned with central and state regulations.</p>
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="font-mono text-[11px] bg-white border border-slate-200 text-[var(--primary)] px-3 py-1.5 rounded-full font-bold shadow-sm">High Temp Probes</span>
+                        <span class="font-mono text-[11px] bg-white border border-slate-200 text-[var(--primary)] px-3 py-1.5 rounded-full font-bold shadow-sm">Heated Sample Lines</span>
+                        <span class="font-mono text-[11px] bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full font-bold shadow-sm">Multi-Gas Analyzers</span>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2 relative group hover-float">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-100 to-slate-200 rounded-3xl transform rotate-2 opacity-70"></div>
+                    <div class="relative bg-white/60 backdrop-blur-xl border border-white rounded-3xl p-8 lg:p-10 premium-shadow">
+                        <div class="flex items-center justify-between mb-8 pb-6 border-b border-slate-200/50">
+                            <h4 class="font-mono text-[12px] text-[var(--primary)] uppercase tracking-widest font-bold flex items-center gap-3"><span class="w-8 h-8 rounded bg-white flex items-center justify-center shadow-sm"><i class="fa-solid fa-industry text-[var(--secondary)] text-lg"></i></span> Stack Blueprint</h4>
+                            <span class="bg-[var(--primary)] text-white text-[9px] px-2 py-1 rounded uppercase tracking-wider font-bold">Hardware Active</span>
+                        </div>
+                        <ul class="space-y-4 text-sm text-slate-700 relative z-10">
+                            <li class="glass-panel p-4 rounded-xl flex items-start gap-4">
+                                <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-wind text-[10px]"></i></div>
+                                <span class="leading-relaxed">Automated air-purge mechanisms remove dust cake layers effortlessly.</span>
+                            </li>
+                            <li class="glass-panel p-4 rounded-xl flex items-start gap-4">
+                                <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5"><i class="fa-solid fa-shield text-[10px]"></i></div>
+                                <span class="leading-relaxed">Corrosion-resistant PTFE lining shrugs off acid mist degradation.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 02: AAQMS (Card L, Text R) -->
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center py-20 border-b border-slate-200/60">
+                <div class="order-1 lg:order-1 relative group hover-float">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-sky-100 to-emerald-50 rounded-[40px] opacity-100 blur-xl"></div>
+                    <div class="relative bg-white/80 backdrop-blur-md rounded-3xl p-8 lg:p-10 premium-shadow border border-sky-100">
+                        <div class="flex items-center justify-between mb-8 pb-6 border-b border-slate-200/50">
+                            <h4 class="font-mono text-[12px] text-[var(--primary)] uppercase tracking-widest font-bold flex items-center gap-3"><span class="w-8 h-8 rounded bg-sky-50 flex items-center justify-center"><i class="fa-solid fa-cloud text-sky-500 text-lg"></i></span> Ambient Stations</h4>
+                        </div>
+                        <ul class="space-y-4 text-sm text-slate-700">
+                            <li class="bg-white p-4 rounded-xl border border-slate-100 flex items-center gap-4 shadow-sm">
+                                <i class="fa-solid fa-temperature-empty text-sky-500"></i> Internal Shelter Climate Control
+                            </li>
+                            <li class="bg-white p-4 rounded-xl border border-slate-100 flex items-center gap-4 shadow-sm">
+                                <i class="fa-solid fa-smog text-slate-400"></i> Boundary PM2.5 / PM10 Modules
+                            </li>
+                            <li class="bg-white p-4 rounded-xl border border-slate-100 flex items-center gap-4 shadow-sm">
+                                <i class="fa-solid fa-wind text-sky-400"></i> Full Meteorological Arrays
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="order-2 lg:order-2 relative z-10 pl-0 lg:pl-4">
+                    <span class="text-[10px] font-bold text-slate-400 tracking-[0.2em] uppercase block mb-3">02 / Perimeter Tracking</span>
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-[var(--primary)] mb-6 leading-tight">Ambient Air Quality Stations (AAQMS)</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Expanding beyond the smokestack to cover the entire plant perimeter. We engineer ruggedized, climate-controlled walk-in shelters that protect highly sensitive ambient monitors from extreme localized weather, ensuring continuous community compliance for mining and cement operations.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="font-mono text-[11px] bg-sky-50 border border-sky-100 text-sky-700 px-3 py-1.5 rounded-full font-bold">PM10/2.5 Tracking</span>
+                        <span class="font-mono text-[11px] bg-slate-50 border border-slate-200 text-[var(--primary)] px-3 py-1.5 rounded-full font-bold">Weatherproof Shelters</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03: EQMS (Text L, Card R) -->
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center py-20 border-b border-slate-200/60">
+                <div class="order-2 lg:order-1 relative z-10">
+                    <span class="text-[10px] font-bold text-slate-400 tracking-[0.2em] uppercase block mb-3">03 / Liquid Discharge</span>
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-[var(--primary)] mb-6 leading-tight">Effluent Quality Monitoring (EQMS)</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Water compliance is penalized just as heavily as air pollution. We deploy robust multi-parameter liquid quality arrays for wastewater and effluent discharge. Utilizing field-proven optical sensors combined with custom auto-cleaning pneumatic systems to counter extreme biological fouling.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="font-mono text-[11px] bg-white border border-slate-200 text-[var(--primary)] px-3 py-1.5 rounded-full font-bold shadow-sm">Anti-Fouling Scrapers</span>
+                        <span class="font-mono text-[11px] bg-white border border-slate-200 text-[var(--primary)] px-3 py-1.5 rounded-full font-bold shadow-sm">Optical Probes</span>
+                        <span class="font-mono text-[11px] bg-cyan-50 border border-cyan-200 text-cyan-700 px-3 py-1.5 rounded-full font-bold shadow-sm">pH, TSS, COD, BOD</span>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2 relative group hover-float">
+                    <div class="absolute inset-0 bg-gradient-to-br from-cyan-600 to-blue-900 rounded-3xl transform -rotate-2 opacity-100 shadow-xl"></div>
+                    <div class="relative bg-black/10 backdrop-blur-md rounded-3xl p-8 lg:p-10 border border-white/10 text-white overflow-hidden">
+                        <div class="absolute -right-10 -bottom-10 opacity-20"><i class="fa-solid fa-water text-9xl"></i></div>
+                        <div class="flex items-center justify-between mb-8 pb-6 border-b border-white/20 relative z-10">
+                            <h4 class="font-mono text-[12px] text-cyan-300 uppercase tracking-widest font-bold flex items-center gap-3"><span class="w-8 h-8 rounded bg-white/10 flex items-center justify-center"><i class="fa-solid fa-droplet text-cyan-300"></i></span> Liquid Array</h4>
+                        </div>
+                        <div class="space-y-4 relative z-10 font-mono text-xs">
+                            <div class="bg-black/30 p-4 rounded-lg flex justify-between border border-white/5">
+                                <span class="text-slate-400">Parameter: pH</span> <span class="text-emerald-400 font-bold">Stable (7.2)</span>
+                            </div>
+                            <div class="bg-black/30 p-4 rounded-lg flex justify-between border border-white/5">
+                                <span class="text-slate-400">Parameter: TSS</span> <span class="text-emerald-400 font-bold">Normal</span>
+                            </div>
+                            <div class="bg-black/30 p-4 rounded-lg flex justify-between border border-white/5">
+                                <span class="text-slate-400">Auto-Clean:</span> <span class="text-cyan-300 font-bold">Purge Active</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 04: Legacy Retrofit (Card L, Text R) -->
+            <!-- 04: Legacy Retrofit (Card L, Text R) -->
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center py-20 border-b border-slate-200/60">
+                <div class="order-1 lg:order-1 relative group hover-float">
+                    <div class="relative bg-slate-900 rounded-3xl p-2 border border-slate-700 premium-shadow overflow-hidden">
+                        <div class="bg-[#0B1425] rounded-2xl p-6 lg:p-8 flex flex-col gap-4 relative z-10">
+                            <!-- Legacy Block -->
+                            <div class="bg-slate-800 border border-slate-600 p-4 rounded-xl flex items-center justify-between opacity-70">
+                                <div>
+                                    <p class="text-[10px] text-slate-400 uppercase font-mono mb-1">Legacy Hardware</p>
+                                    <p class="text-sm font-bold text-white">Existing Analog Panels</p>
+                                </div>
+                                <i class="fa-solid fa-server text-slate-500"></i>
+                            </div>
+                            <!-- Bridge -->
+                            <div class="flex justify-center -my-2 relative z-20">
+                                <div class="bg-[var(--secondary)] text-slate-900 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-2 shadow-[0_0_15px_rgba(23,184,144,0.5)]">
+                                    <i class="fa-solid fa-arrow-down"></i> DataSetu™ Integration
+                                </div>
+                            </div>
+                            <!-- Modern Block -->
+                            <div class="bg-emerald-900/30 border border-emerald-500/30 p-4 rounded-xl flex items-center justify-between">
+                                <div>
+                                    <p class="text-[10px] text-emerald-400 uppercase font-mono mb-1">Modern Output</p>
+                                    <p class="text-sm font-bold text-white">CPCB Standard Modbus</p>
+                                </div>
+                                <i class="fa-solid fa-cloud-arrow-up text-emerald-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-2 lg:order-2 relative z-10 pl-0 lg:pl-4">
+                    <span class="text-[10px] font-bold text-slate-400 tracking-[0.2em] uppercase block mb-3">04 / Telemetry Modernization</span>
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-[var(--primary)] mb-6 leading-tight">Legacy IoT Retrofitting</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Modernize your existing infrastructure without replacing expensive gas cells. We integrate the proprietary JIYAR DataSetu™ IoT gateway into legacy analyzer panels, instantly translating analog signals and bringing outdated hardware up to modern central SPCB telemetry standards.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="font-mono text-[11px] bg-slate-50 border border-slate-200 text-[var(--primary)] px-3 py-1.5 rounded-full font-bold">Protocol Translation</span>
+                        <span class="font-mono text-[11px] bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full font-bold">Modbus/RS485 Maps</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 05: AMC & Metrology (Text L, Card R) -->
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center py-20 border-b border-slate-200/60">
+                <div class="order-2 lg:order-1 relative z-10">
+                    <span class="text-[10px] font-bold text-slate-400 tracking-[0.2em] uppercase block mb-3">05 / Uptime Assurance</span>
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-[var(--primary)] mb-6 leading-tight">Preventive AMC & Metrology Services</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Stop fighting sudden analyzer breakdowns. Our localized Jamshedpur engineering division provides rapid-response Annual Maintenance Contracts (AMC), routine component hot-swaps, and NABL-traceable calibration gas audits to keep your existing infrastructure audit-ready 24/7.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="font-mono text-[11px] bg-orange-50 border border-orange-200 text-orange-700 px-3 py-1.5 rounded-full font-bold shadow-sm">24/7 Hot-Swaps</span>
+                        <span class="font-mono text-[11px] bg-white border border-slate-200 text-[var(--primary)] px-3 py-1.5 rounded-full font-bold shadow-sm">NABL Traceable</span>
+                        <span class="font-mono text-[11px] bg-white border border-slate-200 text-[var(--primary)] px-3 py-1.5 rounded-full font-bold shadow-sm">Zero Downtime</span>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2 relative group hover-float">
+                    <div class="absolute -inset-4 bg-slate-100 rounded-[40px] opacity-100 blur-xl"></div>
+                    <div class="relative bg-white rounded-3xl p-8 lg:p-12 premium-shadow ring-1 ring-slate-200 border-t-8 border-[var(--primary)]">
+                        <div class="flex justify-between items-start mb-6">
+                            <h4 class="font-mono text-[12px] text-[var(--primary)] uppercase tracking-widest font-bold flex items-center gap-3"><i class="fa-solid fa-clipboard-check text-[var(--secondary)] text-xl"></i> Service Level Agreement</h4>
+                            <span class="text-slate-300 text-2xl"><i class="fa-solid fa-file-signature"></i></span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between pb-4 border-b border-slate-100 border-dashed">
+                                <span class="text-sm font-bold text-slate-700">Preventive Site Visits</span>
+                                <span class="text-xs font-mono text-[var(--secondary)] font-bold">SCHEDULED</span>
+                            </div>
+                            <div class="flex items-center justify-between pb-4 border-b border-slate-100 border-dashed">
+                                <span class="text-sm font-bold text-slate-700">Calibration Gas Audit</span>
+                                <span class="text-xs font-mono text-[var(--secondary)] font-bold">VERIFIED</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm font-bold text-slate-700">Spares Depot Access</span>
+                                <span class="text-xs font-mono text-[var(--secondary)] font-bold">UNLIMITED</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 06: Hardware Leasing (Card L, Text R) -->
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center py-20 border-b border-slate-200/60">
+                <div class="order-1 lg:order-1 relative group hover-float">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-emerald-50 to-blue-50 rounded-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+                    <div class="relative bg-white rounded-3xl p-8 lg:p-12 premium-shadow ring-1 ring-emerald-100 overflow-hidden">
+                        <div class="absolute top-0 right-8 w-16 h-20 bg-[var(--secondary)] flex flex-col items-center justify-end pb-3 text-white shadow-lg rounded-b-lg">
+                            <i class="fa-solid fa-tag text-xl"></i>
+                        </div>
+                        <h4 class="font-mono text-[12px] text-[var(--primary)] uppercase tracking-widest font-bold mb-8 flex items-center gap-3"><span class="w-8 h-8 rounded bg-slate-50 flex items-center justify-center border border-slate-100"><i class="fa-solid fa-file-contract text-[var(--primary)] text-lg"></i></span> Financial Framework</h4>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4 pb-6 border-b border-slate-100">
+                                <div class="text-[var(--secondary)] mt-1"><i class="fa-regular fa-circle-check text-xl"></i></div>
+                                <div>
+                                    <h5 class="font-bold text-[var(--primary)] text-sm mb-1">Zero CAPEX Deployment</h5>
+                                    <p class="text-xs text-slate-500 leading-relaxed">Shift compliance expenses from steep upfront investments to predictable operational costs.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4 pb-6 border-b border-slate-100">
+                                <div class="text-[var(--secondary)] mt-1"><i class="fa-regular fa-circle-check text-xl"></i></div>
+                                <div>
+                                    <h5 class="font-bold text-[var(--primary)] text-sm mb-1">Maintenance Absorbed</h5>
+                                    <p class="text-xs text-slate-500 leading-relaxed">JIYAR assumes all financial responsibility for routine field maintenance and statutory calibration.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-2 lg:order-2 relative z-10 pl-0 lg:pl-8">
+                    <span class="text-[10px] font-bold text-slate-400 tracking-[0.2em] uppercase block mb-3">06 / Hardware-as-a-Service</span>
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-[var(--primary)] mb-6 leading-tight">Turnkey Hardware Leasing Models</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Avoid large upfront capital outlays. Our flexible instrumentation leasing programs provide your facility with immediate access to premium, fully calibrated monitoring hardware. Upgrades are included, allowing easy adjustments to match changing SPCB rules.</p>
+                    
+                    <a href="leasing.html" class="inline-flex items-center gap-3 font-bold text-sm text-[var(--secondary)] hover:text-[var(--primary)] transition-colors group">
+                        Review Lease Models & SLA Frameworks <i class="fa-solid fa-arrow-right-long transform group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 07: Insight Cloud (Text L, Card R) -->
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center py-20">
+                <div class="order-2 lg:order-1 relative z-10">
+                    <span class="text-[10px] font-bold text-slate-400 tracking-[0.2em] uppercase block mb-3">07 / Data Intelligence</span>
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-[var(--primary)] mb-6 leading-tight">Insight™ Cloud Ecosystem</h2>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Raw monitoring numbers are only useful if they prevent compliance issues. Our JIYAR Insight™ dashboard processes field telemetry streams securely, tracking emission trends and providing automated alerts before your data approaches regulatory caps.</p>
+                    
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="font-mono text-[11px] bg-white border border-slate-200 text-[var(--primary)] px-3 py-1.5 rounded-full font-bold shadow-sm">Predictive Alerts</span>
+                        <span class="font-mono text-[11px] bg-white border border-slate-200 text-[var(--primary)] px-3 py-1.5 rounded-full font-bold shadow-sm">Automated Logging</span>
+                        <span class="font-mono text-[11px] bg-emerald-50 border border-emerald-200 text-emerald-700 px-3 py-1.5 rounded-full font-bold shadow-sm">Secure API Links</span>
+                    </div>
+
+                    <a href="smart-monitoring.html" class="inline-flex items-center gap-3 font-bold text-sm text-[var(--secondary)] hover:text-[var(--primary)] transition-colors group">
+                        Explore Live Insight™ Cloud Dashboard <i class="fa-solid fa-arrow-right-long transform group-hover:translate-x-2 transition-transform"></i>
+                    </a>
+                </div>
+                
+                <div class="order-1 lg:order-2 relative group hover-float">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-[var(--secondary)] to-emerald-400 rounded-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 blur-md"></div>
+                    <div class="relative bg-[#0B1425] rounded-3xl border border-slate-700/50 shadow-[0_30px_60px_rgba(0,0,0,0.3)] overflow-hidden flex flex-col">
+                        <div class="bg-[#15233D] px-6 py-4 flex items-center justify-between border-b border-slate-700/50">
+                            <div class="flex gap-2">
+                                <div class="w-3 h-3 rounded-full bg-slate-600"></div>
+                                <div class="w-3 h-3 rounded-full bg-[var(--secondary)] shadow-[0_0_8px_var(--secondary)]"></div>
+                            </div>
+                            <span class="font-mono text-[10px] text-slate-400 tracking-widest uppercase">Insight™ LiveView</span>
+                        </div>
+
+                        <div class="p-8 lg:p-10 flex-grow">
+                            <div class="font-mono text-[12px] text-emerald-400 mb-8 bg-black/40 p-4 rounded-lg border border-white/5">
+                                > SYSTEM_STATUS: <span class="text-white">ONLINE</span><br>
+                                > CPCB_SERVER_LINK: <span class="text-white">ESTABLISHED</span><br>
+                                > PACKET_TRANSFER: <span class="animate-pulse">SENDING SUCCESSFUL_</span>
+                            </div>
+                            
+                            <ul class="space-y-5 text-sm text-slate-300">
+                                <li class="flex items-start gap-4">
+                                    <div class="w-6 h-6 rounded bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-[10px] text-[var(--secondary)]"><i class="fa-solid fa-bell"></i></div>
+                                    <span class="leading-relaxed">Smart notifications give plant engineers an early warning on anomalies.</span>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-6 h-6 rounded bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 text-[10px] text-[var(--secondary)]"><i class="fa-solid fa-database"></i></div>
+                                    <span class="leading-relaxed">Robust cloud logging creates secure historical records for audits.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pre-Footer CTA -->
+    <section class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="container mx-auto max-w-5xl px-6">
+            <div class="bg-[var(--primary)] rounded-3xl p-10 lg:p-14 text-white flex flex-col md:flex-row justify-between items-center gap-10 premium-shadow relative overflow-hidden group">
+                <div class="absolute inset-0 bg-tech-grid-light opacity-10 group-hover:opacity-20 transition-opacity duration-500"></div>
+                <div class="absolute -right-20 -top-20 w-64 h-64 bg-[var(--secondary)] opacity-10 rounded-full blur-[50px] group-hover:scale-150 transition-transform duration-700"></div>
+                <div class="relative z-10 max-w-xl">
+                    <span class="font-mono text-[11px] text-[var(--secondary)] font-bold uppercase tracking-widest mb-3 block">Ready to Deploy?</span>
+                    <h3 class="text-3xl md:text-4xl font-extrabold mb-5 leading-tight">Let's configure your site's telemetry infrastructure</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed">Our Jamshedpur engineering division offers direct technical audits to match your stack configurations with local statutory rules.</p>
+                </div>
+                <div class="relative z-10 whitespace-nowrap">
+                    <a href="index.html#contact" class="bg-[var(--secondary)] hover:bg-[#14a07d] text-[var(--primary)] font-extrabold text-sm uppercase tracking-wider px-8 py-5 rounded-xl shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all inline-block">Schedule Technical Audit</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Footer -->
+    <!-- Expanded Master Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand & Identity -->
+                <div class="footer-col brand-col">
+                    <div class="footer-logo">
+                        <div class="logo-box">JIYAR</div>
+                        <div class="logo-text">
+                            <span class="text-top">ENVIRONMENTAL</span>
+                            <span class="text-bottom">Technologies Pvt. Ltd.</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Your single-window partner for industrial environmental compliance, precision instrumentation, and smart telemetry across Eastern India.</p>
+                    <ul class="footer-contact">
+                        <li><i class="fa-solid fa-location-dot"></i> Bharam Toli, Bariatu, Near Don Bosco church, Ranchi, Jharkhand (HQ)</li>
+                        <li><i class="fa-solid fa-phone"></i> +91 9110124331, +91 9430100514</li>
+                        <li><i class="fa-solid fa-envelope"></i> info@jiyar.in</li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4>Company Profile</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="industries.html">Sectors Served</a></li>
+                        <li><a href="#contact">Request Compliance Audit</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Core Solutions -->
+                <div class="footer-col">
+                    <h4>Solutions & Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">AMC & Instrumentation</a></li>
+                        <li><a href="solutions.html">Integration & Telemetry</a></li>
+                        <li><a href="index.html#industries">Analyzers & Critical Spares</a></li>
+                        <li><a href="leasing.html">Turnkey Leasing (HaaS)</a></li>
+                        <li><a href="smart-monitoring.html">JIYAR Insight™ Cloud Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Regions & Certifications -->
+                <div class="footer-col">
+                    <h4>Operational Reach</h4>
+                    <ul class="footer-links region-list">
+                        <li><i class="fa-solid fa-map-pin"></i> Jharkhand</li>
+                        <li><i class="fa-solid fa-map-pin"></i> Odisha</li>
+                        <li><i class="fa-solid fa-map-pin"></i> Chhatisgarh</li>
+                        <li><i class="fa-solid fa-map-pin"></i> West Bengal</li>
+                    </ul>
+                    <div class="footer-badges">
+                        <span class="compliance-badge"><i class="fa-solid fa-check-circle"></i> CPCB Ready</span>
+                        <span class="compliance-badge"><i class="fa-solid fa-check-circle"></i> USEPA Standards</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom-bar">
+                <p>&copy; 2026 JIYAR Environmental Technologies Pvt. Ltd. All Rights Reserved.</p>
+                <div class="footer-legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <span class="separator">|</span>
+                    <a href="terms-conditions.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+  
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenuContainer = document.getElementById('nav-menu-container');
+
+        if(mobileMenuBtn && navMenuContainer) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                navMenuContainer.classList.toggle('active');
+            });
+        }
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
